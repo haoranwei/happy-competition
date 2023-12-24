@@ -2,15 +2,13 @@
 
 >  简单的vue.js + vuex项目，整个流程一目了然,适合作为入门练习。
 
->  如果对您有帮助，您可以点右上角 "Star",谢谢~
-
 >  Mainly Redesigned by haoranwei -->
 
->  注:本项目文件架构参考自：https://github.com/bailicangdu/vue2-happyfri
+>  注:本项目参考自：https://github.com/bailicangdu/vue2-happyfri
 
 >  感谢cangdu
 
-> Salute cangdu~ 
+>  Salute cangdu~ 
 
 # 项目介绍
 
@@ -29,7 +27,7 @@
 
 ### 安装依赖
 ```bash
-npm install 或 yarn(推荐)
+npm install
 ```
 若依赖配置冲突，请:
 ```bash
@@ -38,18 +36,13 @@ npm install --force
 
 ### 开启本地服务器localhost:8088
 ```bash
-npm run dev
+npm run serve
 ```
 
-### 发布环境(持久化)
+### 发布环境
 ```bash
 npm run build
 ```
-
-# 效果演示
-
-[demo地址](https://cangdu.org/happyfri/)
-（请用浏览器移动设备模式预览，效果最佳）
 
 ## 路由配置
 ```js
@@ -71,7 +64,6 @@ export default [{
 }]
 
 ```
-
 
 
 ## 配置actions
