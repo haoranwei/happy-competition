@@ -1,27 +1,40 @@
 # 说明
+>	简单的vue.js + vuex项目，适合入门练习。
+>	Mainly Redesigned by haoranwei -->
 
->  简单的vue.js + vuex项目，整个流程一目了然,适合作为入门练习。
+>	注:本项目参考自：https://github.com/bailicangdu/vue2-happyfri
 
->  Mainly Redesigned by haoranwei -->
+>	本项目使用MIT LICENSE，原作者MIT LICENSE位于根目录COPYING [原作者协议](COPYING)
 
->  注:本项目参考自：https://github.com/bailicangdu/vue2-happyfri
+>	本项目新增了登录注册页面和判定逻辑，优化了部分样式，为部分代码添加了中文注释。
 
->  感谢cangdu
-
->  Salute cangdu~ 
+>	特别感谢 cangdu
+>	Salute cangdu~ 
 
 # 项目介绍
-
 ## 文件树
 ```
 ├── build                     // 构建相关
 ├── config                    // 配置相关
-├── src                       // 源代码
+├── src                       // 源码
 │   ├── assets                // 资源
 │   ├── components            // 组件
 │   ├── page                  // 页面
 │   ├── router                // 路由
 │   ├── store                 // 全局状态管理
+|   |   ├── actions.js         // actions
+|   |   ├── index.js           // store
+|   |   ├── mutations.js       // mutations
+│   ├── App.vue               // 入口页面
+│   ├── main.js               // 入口文件
+├──.babelrc                  // babel-loader 配置
+├──.eslintrc.js              // eslint 配置项
+├──.gitignore                // git 忽略项
+|—— COPYING                  // 原作者cangdu开源协议
+├── index.html                // 入口模板
+|—— LICENSE                  // 开源协议
+├── package.json              // 项目配置
+└── README.md                 // 项目说明	
 ```
 ## 项目运行（nodejs 6.0+）
 
@@ -34,11 +47,10 @@ npm install
 npm install --force
 ```
 
-### 开启本地服务器localhost:8088
+### 开启本地服务器,访问localhost:8088
 ```bash
 npm run serve
 ```
-
 ### 发布环境
 ```bash
 npm run build
@@ -47,21 +59,27 @@ npm run build
 ## 路由配置
 ```js
 import App from '../App'
-
 export default [{
     path: '/',
     component: App,
     children: [{
         path: '',
-        component: r => require.ensure([], () => r(require('../page/home')), 'home')
+        component: r => require.ensure([], () => r(require('../page/home')), 'home')//首页
     }, {
         path: '/item',
-        component: r => require.ensure([], () => r(require('../page/item')), 'item')
+        component: r => require.ensure([], () => r(require('../page/item')), 'item')//答题过程
     }, {
         path: '/score',
-        component: r => require.ensure([], () => r(require('../page/score')), 'score')
-    }]
+        component: r => require.ensure([], () => r(require('../page/score')), 'score')//最终得分
+    }, {
+        path: '/login',
+        component: r => require.ensure([], () => r(require('../page/login')), 'login')//登录页
+    }, {
+        path: '/register',
+        component: r => require.ensure([], () => r(require('../page/register')), 'register')//注册页
+    },]
 }]
+
 
 ```
 

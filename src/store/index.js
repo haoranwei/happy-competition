@@ -185,11 +185,10 @@ export default new Vuex.Store({
 	mutations
 })
 
-// 这段代码是使用Vuex库创建一个新的状态管理对象。它导出一个Vuex.Store的实例，这个实例包含三个部分：
-
+// Vuex创建一个新的状态管理对象。导出Vuex.Store的实例，这个实例包含三个部分：
 // - state：用于存储应用程序的状态数据。
 // - actions：用于定义可以异步执行的操作，通常用于提交（dispatch）mutations。
 // - mutations：用于更改state中的数据，必须是同步操作且会直接修改state。
 
-// 这个store对象可以在Vue组件中使用，通过`this.$store`来访问。在Vue组件中，
-// 可以通过调用`store.commit`方法来触发actions，或者通过调用`store.dispatch`方法来触发mutations。
+// 该store对象可在Vue组件中使用，通过`this.$store`来访问。在Vue组件中，
+// 可通过调用`store.commit`方法来触发actions，或通过调用`store.dispatch`方法来触发mutations。

@@ -93,10 +93,12 @@ export default {
 			itemId: null, //题目ID
 			choosedNum: null, //选中答案索引
 			choosedId: null, //选中答案id
-			email:null,
-			password:null,
+			email:null,  // 电子邮件地址，默认为null
+			password:null,  // 密码，默认为null
 		}
 	},
+	// 父组件，定义props数组，包含一个元素，值为fatherComponent
+	// 这个函数用于接收父组件传递过来的fatherComponent的值
 	props: ['fatherComponent'],
 	computed: mapState([
 		'itemNum', //第几题
@@ -104,10 +106,10 @@ export default {
 		'itemDetail', //题目详情
 		'timer', //计时器
 
-		'NewEmail', 
-		'NewPassword',
-		'registeredEmail', 
-		'registeredPassword'
+		'NewEmail',  // 新邮件
+		'NewPassword',  // 新密码
+		'registeredEmail',  // 已注册的邮箱
+		'registeredPassword'  // 已注册的密码
 	]),
 	methods: {
 		...mapActions([
@@ -148,10 +150,9 @@ export default {
 				this.addNum(this.choosedId)
 				clearInterval(this.timer)
 				this.$router.push('score')
-				// 				  在Vue.js中，路由是通过Vue Router库来实现的。this.$router是Vue Router实例的引用，
-				// 				  它提供了一些方法来处理路由导航和路由参数。
-				// 				  push()方法是this.$router对象的一个方法，用于通过编程方式导航到不同的路由。
-				// 		当调用this.$router.push('score')时，它会触发Vue Router的路由切换逻辑，并将用户导航到名为'score'的路由。
+				// this.$router是Vue Router实例的引用，
+				// 	push()方法是this.$router对象的一个方法，用于通过编程方式导航到不同的路由。
+				// 	调用this.$router.push('score')时，会触发Vue Router的路由切换逻辑，并将用户导航到名为'score'的路由。
 			} else {
 				alert('您还没有选择答案哦')
 			}
