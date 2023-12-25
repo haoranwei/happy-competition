@@ -4,8 +4,6 @@
 
 >	注:本项目参考自：https://github.com/bailicangdu/vue2-happyfri
 
->	本项目使用MIT LICENSE，原作者MIT LICENSE位于根目录COPYING [原作者协议](COPYING)
-
 >	本项目新增了登录注册页面和判定逻辑，优化了部分样式，为部分代码添加了中文注释。
 
 >	特别感谢 cangdu
